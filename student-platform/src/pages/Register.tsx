@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form'
 import { getEmailValidationMessage, isRealisticEmail } from '@/lib/utils'
 import { useAuthStore } from '@/store/useAuthStore'
 import { btechYearOptions } from '@/lib/btech'
-import kluHeaderLogo from '@/assets/klu-header-logo.png'
+import sandipLionLogo from '@/assets/sandip-lion-logo.png'
 
 interface FormData {
   name: string
@@ -79,9 +79,9 @@ export function Register() {
         <div className="text-center mb-7">
           <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ type: 'spring', damping: 12 }}
             className="mx-auto mb-3 flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-white/60 bg-white/75 p-1.5 shadow-[0_10px_24px_rgba(15,23,42,0.12)] backdrop-blur-xl">
-            <img src={kluHeaderLogo} alt="KL University" className="h-full w-full object-contain" />
+            <img src={sandipLionLogo} alt="Sandip University" className="h-full w-full object-contain" />
           </motion.div>
-          <h1 className="text-2xl font-bold text-gray-900">Create KL U Account</h1>
+          <h1 className="text-2xl font-bold text-gray-900">Create Sandip U Account</h1>
           <p className="text-sm text-gray-500 mt-1">Create your account now. Email verification is temporarily turned off.</p>
         </div>
 
@@ -141,7 +141,7 @@ export function Register() {
                       ? 'border border-indigo-200 bg-indigo-50 text-indigo-700'
                       : 'border border-emerald-200 bg-emerald-50 text-emerald-700'
                   }`}>
-                    <BookOpen size={15} /> {selectedRole === 'faculty' ? 'KL U Faculty Registration' : 'KL U Learner Registration'}
+                    <BookOpen size={15} /> {selectedRole === 'faculty' ? 'Sandip U Faculty Registration' : 'Sandip U Learner Registration'}
                   </span>
                 </div>
 

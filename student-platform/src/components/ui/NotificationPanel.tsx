@@ -242,6 +242,7 @@ export function NotificationPanel() {
   const unread = notifications.filter((n) => !n.read).length
   const triggerRef = useRef<HTMLDivElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
+  const touchStartY = useRef(0)
 
   useEffect(() => {
     const h = (e: MouseEvent) => {
@@ -375,10 +376,30 @@ export function NotificationPanel() {
                   </div>
                   <div 
                     className="slim-scrollbar flex-1 overflow-y-auto overscroll-y-contain overflow-x-visible px-2 pb-0.5 pt-2"
+                    onWheel={(e) => {
+                      if (e.currentTarget.scrollTop === 0 && e.deltaY < -15) {
+                        setOpen(false)
+                      }
+                    }}
+                    onTouchStart={(e) => {
+                      touchStartY.current = e.touches[0].clientY
+                    }}
+                    onTouchMove={(e) => {
+                      if (e.currentTarget.scrollTop === 0) {
+                        const touchY = e.touches[0].clientY
+                        if (touchY - touchStartY.current > 30) {
+                          setOpen(false)
+                        }
+                      }
+                    }}
                     onScroll={(e) => {
                       const { scrollTop, scrollHeight, clientHeight } = e.currentTarget
                       // If overscrolled at the bottom by more than 20px (iOS bounce), close the panel
                       if (scrollTop + clientHeight > scrollHeight + 20) {
+                        setOpen(false)
+                      }
+                      // If overscrolled at the top by more than 20px, close the panel
+                      if (scrollTop < -20) {
                         setOpen(false)
                       }
                     }}

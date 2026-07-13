@@ -4,7 +4,7 @@ import { ShieldCheck, Mail, Lock, Eye, EyeOff, ArrowLeft, AlertCircle } from 'lu
 import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import { useAuthStore } from '@/store/useAuthStore'
-import klUniversityLogo from '@/assets/kl-university-logo.png'
+import sandipLionLogo from '@/assets/sandip-lion-logo.png'
 
 interface FormData { email: string; password: string }
 
@@ -42,9 +42,9 @@ export function AdminLogin() {
 
         <div className="mb-5 text-center sm:mb-7">
           <div className="mx-auto mb-3 flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border border-slate-200/80 bg-white shadow-[0_12px_28px_rgba(15,23,42,0.10)] dark:border-white/15 dark:bg-white sm:h-24 sm:w-24">
-            <img src={klUniversityLogo} alt="KL University" className="h-[5.35rem] w-[5.35rem] max-w-none object-contain sm:h-[6.35rem] sm:w-[6.35rem]" />
+            <img src={sandipLionLogo} alt="Sandip University" className="h-[5.35rem] w-[5.35rem] max-w-none object-contain sm:h-[6.35rem] sm:w-[6.35rem]" />
           </div>
-          <h1 className="text-lg font-bold text-light-ink-primary dark:text-dark-ink-primary sm:text-xl">KL University Faculty Portal</h1>
+          <h1 className="text-lg font-bold text-light-ink-primary dark:text-dark-ink-primary sm:text-xl">Sandip University Faculty Portal</h1>
           <p className="mt-1 text-xs text-light-ink-muted dark:text-dark-ink-muted">Manage B.Tech cohorts, assignments, and progress analytics</p>
         </div>
 

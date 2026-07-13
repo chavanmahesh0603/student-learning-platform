@@ -18,7 +18,7 @@ import {
   UsersRound,
 } from 'lucide-react'
 import { LayoutGroup, motion } from 'framer-motion'
-import klUniversityLogo from '@/assets/kl-university-logo.png'
+import sandipLionLogo from '@/assets/sandip-lion-logo.png'
 import { useAuthStore } from '@/store/useAuthStore'
 import { useUIStore } from '@/store/useUIStore'
 import { NotificationPanel } from './NotificationPanel'
@@ -184,14 +184,14 @@ export function Navbar({ title }: NavbarProps) {
           className="brand-pill apple-glass flex shrink-0 items-center gap-2 rounded-full px-2.5 py-1.5 transition-colors hover:bg-white/80 dark:border-white/15 dark:bg-slate-900/85 dark:text-white dark:hover:bg-slate-800/90"
           title={title}
         >
-          <span className="glass-icon h-7 w-7 overflow-hidden rounded-full p-0.5">
+          <span className="glass-icon h-7 w-7 overflow-hidden rounded-full p-0">
             <img
-              src={klUniversityLogo}
-              alt="KL University"
-              className="h-full w-full rounded-full object-contain"
+              src={sandipLionLogo}
+              alt="Sandip University"
+              className="h-full w-full rounded-full object-cover scale-[1.35]"
             />
           </span>
-          <span className="hidden text-[13px] font-bold text-light-ink-primary dark:text-dark-ink-primary sm:block">KL University</span>
+          <span className="hidden text-[13px] font-bold text-light-ink-primary dark:text-dark-ink-primary sm:block">Sandip University</span>
         </button>
 
         <nav className="mobile-nav-row hide-scrollbar order-4 -mx-1 w-[calc(100%+0.5rem)] min-w-0 overflow-x-auto lg:order-none lg:mx-0 lg:w-auto lg:flex-1">

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useAuthStore } from '@/store/useAuthStore'
 import { useNavigate } from 'react-router-dom'
 import { cn } from '@/lib/utils'
-import kluHeaderLogo from '@/assets/klu-header-logo.png'
+import sandipLionLogo from '@/assets/sandip-lion-logo.png'
 import { getRoleLabel, isStaffRole } from '@/lib/roles'
 
 const adminLinks = [
@@ -45,11 +45,11 @@ export function Sidebar({ open, onClose }: SidebarProps) {
     <div className="flex h-full flex-col overflow-hidden">
       {/* Logo */}
       <div className="flex items-center gap-3 border-b border-light-border px-4 py-4 dark:border-dark-border">
-        <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-xl border border-white/60 bg-white/75 p-1 shadow-sm">
-          <img src={kluHeaderLogo} alt="KL University" className="h-full w-full object-contain" />
+        <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-xl border border-white/60 bg-white/75 p-0 shadow-sm">
+          <img src={sandipLionLogo} alt="Sandip University" className="h-full w-full object-cover scale-[1.35]" />
         </div>
         <div>
-          <p className="text-[13px] font-bold text-light-ink-primary dark:text-dark-ink-primary">KL U</p>
+          <p className="text-[13px] font-bold text-light-ink-primary dark:text-dark-ink-primary">Sandip University</p>
           <p className="text-xs text-light-ink-muted dark:text-dark-ink-muted">Academic Command Center</p>
         </div>
         <button onClick={onClose} className="ml-auto rounded-lg p-1.5 text-light-ink-muted hover:bg-light-hover dark:text-dark-ink-muted dark:hover:bg-dark-hover lg:hidden">

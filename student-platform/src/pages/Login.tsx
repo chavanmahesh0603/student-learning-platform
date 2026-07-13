@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { ArrowRight, ShieldCheck, User, BarChart3, BookOpen, Users } from 'lucide-react'
 import { motion } from 'framer-motion'
-import kluHeaderLogo from '@/assets/klu-header-logo.png'
+import sandipLogo from '@/assets/sandip-university-logo.png'
 
 const features = [
   { icon: BarChart3, label: 'Placement Analytics' },
@@ -26,10 +26,10 @@ export function Login() {
         <section className="min-w-0 text-center lg:text-left">
           <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ type: 'spring', damping: 12 }}
             className="mx-auto mb-4 flex aspect-[2.45/1] w-full max-w-[20rem] items-center justify-center overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-4 shadow-[0_12px_28px_rgba(15,23,42,0.10)] dark:border-white/15 dark:bg-white sm:max-w-sm sm:rounded-[2rem] sm:p-5 lg:mx-0">
-            <img src={kluHeaderLogo} alt="KL University" className="h-full w-full object-contain" />
+            <img src={sandipLogo} alt="Sandip University" className="h-full w-full object-contain" />
           </motion.div>
           <p className="mb-0.5 text-[9px] font-medium uppercase tracking-wide text-indigo-500">Student Learning Portal</p>
-          <h1 className="text-lg font-semibold text-light-ink-primary dark:text-dark-ink-primary sm:text-xl">KL University</h1>
+          <h1 className="text-lg font-semibold text-light-ink-primary dark:text-dark-ink-primary sm:text-xl">Sandip University</h1>
           <p className="mx-auto mt-1 max-w-[18rem] text-[11px] leading-5 text-slate-600 dark:text-slate-300 lg:mx-0">
             One place for learning, assessments, and progress.
           </p>
@@ -67,7 +67,7 @@ export function Login() {
                 <User size={20} className="text-emerald-400 sm:size-[22px]" />
               </div>
               <div className="min-w-0 flex-1">
-                <p className="text-sm font-semibold text-light-ink-primary dark:text-dark-ink-primary">KL University Learner</p>
+                <p className="text-sm font-semibold text-light-ink-primary dark:text-dark-ink-primary">Sandip University Learner</p>
                 <p className="text-xs text-light-ink-muted dark:text-dark-ink-muted">Track progress, submissions, and semester performance</p>
               </div>
               <ArrowRight size={17} className="shrink-0 text-emerald-400 transition-transform group-hover:translate-x-0.5" />
